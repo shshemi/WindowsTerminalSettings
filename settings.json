@@ -1,0 +1,119 @@
+
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "useTabSwitcher": false,
+
+    "profiles":
+    {
+        "defaults":
+        {
+            // Put settings here that you want to apply to all profiles
+            "colorScheme": "Argonaut",
+            "fontFace":  "Delugia Nerd Font",
+            // "fontFace":  "Monaco NF",
+            "fontSize":  10,
+            "cursorShape": "filledBox",
+            "suppressApplicationTitle": false
+        },
+        "list":
+        [
+            {
+                // Make changes here to the powershell.exe profile
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Posh",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                // Make changes here to the cmd.exe profile
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "cmd",
+                "commandline": "cmd.exe",
+                "hidden": true
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "//wsl$/Ubuntu/home/shayan"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "//wsl$/Ubuntu-20.04/home/shayan"
+            }
+        ]
+    },
+
+    // Add custom color schemes to this array
+    "schemes": [
+        {
+            "name": "Argonaut",
+            "foreground": "#fffaf4",
+            "background": "#131623",
+            "black": "#232323",
+            "red": "#ff000f",
+            "green": "#8ce10b",
+            "yellow": "#ffb900",
+            "blue": "#008df8",
+            "purple": "#6d43a6",
+            "cyan": "#00d8eb",
+            "white": "#ffffff",
+            "brightBlack": "#999999",
+            "brightRed": "#ff2740",
+            "brightGreen": "#abe15b",
+            "brightYellow": "#ffd242",
+            "brightBlue": "#0092ff",
+            "brightPurple": "#9a5feb",
+            "brightCyan": "#67fff0",
+            "brightWhite": "#ffffff",
+            "selectionBackground": "#fffaf4"
+        },
+        {
+            "name" : "Solarized Dark",
+            "background" : "#002B36",
+            "black" : "#073642",
+            "blue" : "#268BD2",
+            "brightBlack" : "#002B36",
+            "brightBlue" : "#839496",
+            "brightCyan" : "#93A1A1",
+            "brightGreen" : "#586E75",
+            "brightPurple" : "#6C71C4",
+            "brightRed" : "#CB4B16",
+            "brightWhite" : "#FDF6E3",
+            "brightYellow" : "#657B83",
+            "cyan" : "#2AA198",
+            "foreground" : "#839496",
+            "green" : "#859900",
+            "purple" : "#D33682",
+            "red" : "#DC322F",
+            "white" : "#EEE8D5",
+            "yellow" : "#B58900"
+        }
+    ],
+
+    // Add any keybinding overrides to this array.
+    // To unbind a default keybinding, set the command to "unbound"
+    "keybindings": [
+        {"command": "closeTab", "keys": ["ctrl+w"]},
+        {"command": "newTab", "keys": ["ctrl+t"]},
+        {"command": "nextTab", "keys": ["ctrl+right"]},
+        {"command": "prevTab", "keys": ["ctrl+left"]},
+        {"command": "openNewTabDropdown", "keys": ["ctrl+`"]}
+
+    ]
+}
